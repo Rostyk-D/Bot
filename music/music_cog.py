@@ -3,7 +3,7 @@ from config.config import asyncio, discord, yt_dlp
 # import spotipy
 
 """
-Не готове повністю 34%/100%
+Не готове повністю: 30%/100%
 1) Youtube music +
 2) Spotify music -
 3) SoundCloud music - 
@@ -19,7 +19,7 @@ YDL_OPTION = {  #  Youtube settings
 
 FFMPEG_OPTION = {  # Setting for audio player
     'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',  # reconnection
-    'options': '-vn -b:a 128k'  # 128 low or 196 high
+    'options': '-vn -b:a 196k'  # 128 low or 196 high
 }
 
 
@@ -86,8 +86,6 @@ class Music(commands.Cog):
                 await self.play_next(ctx)
         else:
             await ctx.send('Черга порожня!')
-            await asyncio.sleep(15)
-            await ctx.voice_client.disconnect()
 
     @commands.command(name='skip')
     async def skip(self, ctx):
