@@ -2,3 +2,6 @@ discord.py
 yt_dlp
 ffmpeg
 pynacl
+
+# maybe spotify api
+spotipy
