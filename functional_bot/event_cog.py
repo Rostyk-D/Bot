@@ -3,7 +3,7 @@ from config.config import random, asyncio, discord
 from discord.ext import commands
 """
 Покіщо врозробці концепції
-1) black_jack
+1) black_jack %20
 2)???
 """
 
@@ -17,6 +17,7 @@ class event_cog(commands.Cog):
         await ctx.respond(f"{ctx.author.mention}, розпочинаємо гру в Blackjack!", ephemeral=True)
         await self.start_blackjack(ctx)
 
+    # треба добавити картинкі колоди
     async def start_blackjack(self, ctx):
         cards = []
 

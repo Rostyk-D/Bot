@@ -21,6 +21,7 @@ class text_cog(commands.Cog):
                         await error_message.delete()
                         await ctx.message.delete()
                     await asyncio.sleep(5)
+
                 success_message = await ctx.send('Всі повідомлення видаленні, до давності 14 днів.') # правила діскорду
                 await asyncio.sleep(3)
                 await success_message.delete()

@@ -6,8 +6,6 @@ import asyncio
 import discord.ext.commands as commands
 import discord
 
-# Видаляємо стандартну команду допомоги, щоб створити власну
-
 #стартова командна строка
 BOT_PREFIX = "."
 
@@ -17,6 +15,7 @@ intents = discord.Intents.all()
 #ініціалізація бота
 bot = commands.Bot(command_prefix=BOT_PREFIX, intents=intents)
 
+# Видаляємо стандартну команду допомоги, щоб створити власну
 bot.remove_command('help')
 
 @bot.event

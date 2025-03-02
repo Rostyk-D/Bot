@@ -13,7 +13,7 @@ YDL_OPTION = {  #  Youtube settings
     'noplaylist': True,
     'nocheckcertificate': True,  # для того щоби не тратити інтернет на перевірку + скіп перевірки по можливості
     'no_warnings': True,  # оминати попередження (хз чи працює)
-    'default_search': 'auto',  # для перепідключення уразі не справної закачкі
+    'default_search': 'auto',
     'socket_timeout': 30,  # затримка для сокета через те що інтернет поганий
 }
 
@@ -21,9 +21,6 @@ FFMPEG_OPTION = {  # Setting for audio player
     'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',  # reconnection
     'options': '-vn -b:a 196k'  # 128 low or 196 high
 }
-
-
-
 
 # oauth_object = spotipy.SpotifyOAuth(clientID, clientSecret, redirect_uri)
 # token_dict = oauth_object.get_access_token()
@@ -139,5 +136,3 @@ class Music(commands.Cog):
             await ctx.send("Відключено від голосового каналу.")
         else:
             await ctx.send("Я не в голосовому каналі.")
-
-
